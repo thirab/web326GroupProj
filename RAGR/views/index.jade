@@ -1,0 +1,13 @@
+extends layout
+
+block content
+        div(class="topbar")
+                div(class="col-big")
+                        div(id="righttitle")
+                                =titleinfobar
+                div(class="col-small")
+                        div(id="lefttitle")
+                                =accountinfobar
+        div(class="contentbody")
+                div(id="content")
+                        =bodycontent
