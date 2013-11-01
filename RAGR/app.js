@@ -32,6 +32,10 @@ if ('development' == app.get('env')) {
 
 app.get('/', mainscreen.mainscreen);
 app.get('/users', user.list);
+app.get('/new', routes.new);
+app.get('/profile', routes.profile);
+app.get('/login', routes.login);
+//TODO talk to vouter app.get('/', routes.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
