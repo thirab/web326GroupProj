@@ -13,10 +13,10 @@ $(function () {
 		};
       });
 	
-	$(document).find("signup").bind('click', function (event){
-		 window.open('http://localhost:3000/studentCheck');
+	$(document).find("signupButton").bind('click', function (event){
+		 window.open('http://localhost:3000/new');
 	}
-	$(document).find("login").bind('click', function (event){
+	$(document).find("loginButton").bind('click', function (event){
 		var user=$(document).find("user");
 		var pass=$(document).find("pass");
 		var student = false;
@@ -30,7 +30,6 @@ $(function () {
 		}
 		//TODO check loaded array currently only valid if user == pass
 		if(found){
-			(active,name,.05);
 			window.open('http://localhost:3000/login/set/' + user + '/'+ pass + '/' + student);
 		}else(){
 			alert("Sorry this is invalid");

@@ -38,7 +38,7 @@ exports.edit = function(req, res){
 // 	res.redirect('http://localhost:3000/login');
 // 	}else if(req.cookies.student === "true"){
 	//TODO show student profile
-	res.render('edit', { 
+	res.render('editP', { 
                         title:'RAGR',
                         titleinfobar: 'Edit'
                        });
