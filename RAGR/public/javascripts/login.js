@@ -13,10 +13,10 @@ $(function () {
 		};
       });
 	
-	$(document).find("Signup").bind('click', function (event){
+	$(document).find("signup").bind('click', function (event){
 		 window.open('http://localhost:3000/studentCheck');
 	}
-	$(document).find("Login").bind('click', function (event){
+	$(document).find("login").bind('click', function (event){
 		var user=$(document).find("user");
 		var pass=$(document).find("pass");
 		var student = false;

@@ -1,0 +1,4 @@
+<h1><%= title %></h1>
+//TODO fill with user data
+
+<button type="button">Edit</button>
