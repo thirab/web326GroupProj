@@ -19,31 +19,24 @@ $(function () {
 	$(document).find("Login").bind('click', function (event){
 		var user=$(document).find("user");
 		var pass=$(document).find("pass");
+		var student = false;
 		var found = false;
 		for(var i=0; i<userN.length ; i++){
 			if(userN[i] === userN && passW[i] === pass){
 			found=true;
+				//TODO check if student
+				var student = true;
 			}	
 		}
 		//TODO check loaded array currently only valid if user == pass
 		if(found){
-			createCookie(active,name,.05);
-			window.open('http://localhost:3000/');
+			(active,name,.05);
+			window.open('http://localhost:3000/login/set/' + user + '/'+ pass + '/' + student);
 		}else(){
 			alert("Sorry this is invalid");
 			$(document).find("pass").text("");
 		}
 	}
-	
-	function createCookie(name,value,days) {
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime()+(days*24*60*60*1000));
-		var expires = "; expires="+date.toGMTString();
-	}
-	else var expires = "";
-	$(document.cookie) = name+"="+value+expires+"; path=/";
-}
 	
 	
 })

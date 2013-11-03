@@ -11,22 +11,7 @@ $(function () {
 		
 		//TODO save data in file as user
 		
-		createCookie(active,user,.05)	
-		window.open('http://localhost:3000/'); 
-	}
-	
-	function createCookie(name,value,days) {
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime()+(days*24*60*60*1000));
-		var expires = "; expires="+date.toGMTString();
-	}
-	else var expires = "";
-	document.cookie = name+"="+value+expires+"; path=/";
-	}
-	
-	function eraseCookie(name) {
-	createCookie(name,"",-1);
+		window.open('http://localhost:3000/login/set/' + user + "/" + pass + "/" + student); 
 	}
 })
 
