@@ -1,0 +1,22 @@
+extends eventgoer
+
+block head
+        
+        link(rel='stylesheet', href='/stylesheets/user.css') 
+        link(rel='stylesheet', href='/bower_components/medium-editor/dist/css/medium-editor.css') 
+        
+block usercontent
+        form
+                div(class="editable", name="eventtitle", style="height:80px;")
+                        | Event Title
+                div(class="editable", name="eventbody", style="height:500px")
+                        | Body of Event
+                button(id="submitevent", type="submit")
+                        | Submit Event
+
+block foot
+        script(src="/bower_components/medium-editor/dist/js/medium-editor.js")
+        script(type='text/javascript').
+                var editor = new MediumEditor('.editable');
+
+

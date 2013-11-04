@@ -1,0 +1,20 @@
+extends index
+
+block head 
+
+        link(rel='stylesheet', href='/stylesheets/user.css') 
+
+block bodycontent
+
+        div(id="content-top") 
+                a(href="#" action='/user/create') Create
+                <span> | </span>
+                a(href="#" action='/user/edit') Edit
+                if user.type === "verified"
+                        <span> | </span>
+                        a(action='/user/view') View
+        block usercontent
+                
+
+
+

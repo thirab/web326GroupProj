@@ -1,0 +1,16 @@
+mixin eventtemplate(title, body)
+        .eventcontainer
+                .event
+                        h2
+                                =title
+                        .eventbody
+                                =body
+
+extends eventgoer
+block head
+        link(rel='stylesheet', href='/stylesheets/view.css') 
+
+block usercontent
+        each post, i in eventPosts
+                mixin eventtemplate(post.title, post.body)
+

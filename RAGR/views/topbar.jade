@@ -1,0 +1,10 @@
+div(class="topbar")
+        div(class="col-big")
+                div(id="righttitle")
+                        =titleinfobar
+        div(class="col-small")
+                div(id="lefttitle")
+                        if user
+                                =user.name
+                        else
+                               p login/register
